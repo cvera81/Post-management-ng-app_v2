@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Clientes</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Fecha Nacimiento</th>
+        <th>Fecha problable de muerte</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let proycliente of proyclientes | async">
+        <td>{{proycliente.nombre}}</td>
+        <td>{{proycliente.apellido}}</td>
+        <td>{{proycliente.edad}}</td>
+        <td>{{proycliente.fechanacimiento}}</td>
+        <td>{{proycliente.fechaProbableDeMuerte}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

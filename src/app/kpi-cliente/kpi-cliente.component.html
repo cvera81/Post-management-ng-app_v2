@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>KPI Clientes</h1>
+  </div>
+  <!--
+  <div class="panel-body">
+    <div *ngIf="kpiClientes">
+      <div>
+        <label>Promedio Edades: </label> {{kpiClientes?.promedioEdades}}
+      </div>
+      <div>
+        <label>Desviacion Estandar: </label> {{kpiClientes?.desEstandarEdades}}
+      </div>
+    </div>
+    -->
+  <div class="panel-body">
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>Promedio</th>
+      <th>Desviacion Estandar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let kpicliente of kpiClientes | async">
+      <td>{{kpicliente.promedioEdades}}</td>
+      <td>{{kpicliente.desEstandarEdades}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+

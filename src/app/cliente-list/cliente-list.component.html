@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Clientes</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>FechaNacimiento</th>
+        <!--<th>Fecha problable de muerte</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cliente of clientes | async">
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.apellido}}</td>
+        <td>{{cliente.edad}}</td>
+        <td>{{cliente.fechanacimiento}}</td>
+        <!--<td>{{cliente.fechaProbableDeMuerte}}</td>-->
+        <!--<td><button (click)="deleteEmployee(employee.id)">Delete</button></td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
